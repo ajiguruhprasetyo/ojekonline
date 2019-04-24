@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dbf4e1">
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:stackFromEnd="true"
+        app:reverseLayout="true"
+        class="android.support.v7.widget.RecyclerView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rv"
+        android:layout_above="@+id/ll2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ll2"
+        android:layout_margin="5dp">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/et_pesan"
+            android:hint="Tulis Pesan"
+            android:maxLines="4"
+            android:minLines="1"
+            android:padding="12dp"
+            android:layout_width="300dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background_normal"
+            android:textColor="#000" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/img_send"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_action_send"
+            android:background="@drawable/circle_btn" />
+
+    </LinearLayout>
+</RelativeLayout>

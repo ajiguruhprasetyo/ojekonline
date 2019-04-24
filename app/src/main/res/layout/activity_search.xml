@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:background="#00000000">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/autocomplete_places"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="9dp"
+            android:singleLine="true"
+            android:background="@drawable/et_style"
+            android:textColorHint="#999"
+            android:hint="Cari lokasi"
+            android:drawableLeft="@drawable/ic_location"
+            android:focusable="true"
+            android:drawablePadding="9dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginBottom="10dp"
+            android:layout_height="40dp"
+            android:textColor="#000" />
+        <ImageView
+            android:id="@+id/cross"
+            android:src="@drawable/cross"
+            android:layout_alignTop="@+id/autocomplete_places"
+            android:layout_alignRight="@+id/autocomplete_places"
+            android:layout_alignEnd="@+id/autocomplete_places"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e1e1e1"
+        android:padding="3dp"
+        android:layout_below="@+id/recyclerView"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView"
+            android:layout_alignLeft="@+id/autocomplete_places"
+            android:layout_alignStart="@+id/autocomplete_places"
+            android:id="@+id/imageView"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/powered_by_google_light" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/relative" />
+
+</RelativeLayout>

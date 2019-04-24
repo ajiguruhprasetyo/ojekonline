@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <inset android:insetTop="5dp" android:insetLeft="10dp" android:insetRight="10dp" android:insetBottom="5dp">
+            <shape >
+                <solid android:color="@color/colorAccents" />
+                <corners android:radius="3dp"/>
+
+                <stroke android:color="#118754" android:width="0.5dp" />
+            </shape>
+        </inset>
+    </item>
+    <item android:state_pressed="true">
+        <inset android:insetTop="5dp" android:insetLeft="10dp" android:insetRight="10dp" android:insetBottom="5dp">
+            <shape >
+                <solid android:color="#2bcf87" />
+                <corners android:radius="3dp"/>
+                <stroke android:color="#118754" android:width="0.5dp" />
+            </shape>
+        </inset>
+    </item>
+</selector>

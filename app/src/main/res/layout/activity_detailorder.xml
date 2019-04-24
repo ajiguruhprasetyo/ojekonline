@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentPadding="5dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Detail Order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView11"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:drawableTint="@color/cast_intro_overlay_button_background_color"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/cast_intro_overlay_button_background_color"
+                        android:textStyle="normal|bold"
+                        android:textAllCaps="false" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color"
+                        android:id="@+id/imageView10" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color"
+                        android:id="@+id/imageView11"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp" />
+
+                    <TextView
+                        android:text="Tanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_date"
+                        android:drawableLeft="@drawable/ic_action_cal"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:text="From"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_from"
+                        android:drawableLeft="@drawable/ic_posisi"
+                        android:gravity="top|left" />
+
+                    <TextView
+                        android:text="Destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_to"
+                        android:drawableLeft="@drawable/ic_drop"
+                        android:gravity="top|left" />
+
+                    <TextView
+                        android:text="Time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_time"
+                        android:drawableLeft="@drawable/ic_action_history"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="3dp"
+                app:contentPadding="5dp"
+                android:layout_marginTop="5dp" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Harga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_jarak"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="Rp.0-"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_harga" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <fragment
+                android:layout_width="match_parent"
+                android:id="@+id/maps"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="3dp"
+                app:contentPadding="5dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Detail Driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:drawableTint="@color/cast_intro_overlay_button_background_color"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/cast_intro_overlay_button_background_color"
+                        android:textStyle="normal|bold"
+                        android:textAllCaps="false" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_action_profile"
+                            android:id="@+id/img_driver"
+                            android:layout_weight="1"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:text="Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_drivername"
+                                android:drawableLeft="@drawable/ic_action_person"
+                                android:gravity="center_vertical" />
+
+                            <TextView
+                                android:text="Email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_email"
+                                android:drawableLeft="@drawable/ic_action_mail"
+                                android:gravity="center_vertical" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:text="Phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/txt_phone"
+                                    android:drawableLeft="@drawable/ic_action_telp"
+                                    android:gravity="center_vertical"
+                                    android:drawableTint="#848484"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_vertical" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:text="Time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_drivertime"
+                                android:drawableLeft="@drawable/ic_action_history"
+                                android:gravity="center_vertical"
+                                android:drawableTint="#848484" />
+
+                            <TextView
+                                android:text="Address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_address"
+                                android:drawableLeft="@drawable/ic_action_home"
+                                android:gravity="center_vertical"
+                                android:drawableTint="#848484" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentPadding="5dp"
+                app:cardCornerRadius="3dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Detail Kendaraan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView13"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:drawableTint="@color/cast_intro_overlay_button_background_color"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/cast_intro_overlay_button_background_color"
+                        android:textStyle="normal|bold"
+                        android:textAllCaps="false" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color"
+                        android:id="@+id/imageView8" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@color/cast_intro_overlay_button_background_color"
+                        android:id="@+id/imageView12"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@drawable/ic_action_motor"
+                        android:id="@+id/img_motor"
+                        android:layout_height="200dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Nama Kendaraan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_nama_kendaraan"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Nomor Polisi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_nopol"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Merek"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_merek"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Warna"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_warna"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Transmisi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_jenis_kendaraan"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Tahun Kendaraan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_tahun_kendaraan"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="CC"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text=": -"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_cc"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
